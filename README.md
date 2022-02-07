@@ -31,6 +31,11 @@ Display real time data from multiple potentiometers simultaneously in a Graphica
 ### Software Setup:
 
 1. Connect the Arduino to your laptop.
-2. Open Arduino IDE, and paste the code (depends on the number of potentiometers used).
+2. Open Arduino IDE, and paste the Arduino code from this repository (depends on the number of potentiometers used).
 3. Open IntelliJ Idea, create a new JavaFX project with the name 'JavaFX_Arduino_Live'.
-4. 
+4. Download the 'jssc' and 'Medusa' jar files from this repository.
+5. Go to 'File - Project Structure - Libraries'.
+6. Click on the '+' and add both these jar files.
+7. Click on 'Apply', then 'OK'.
+8. Paste the JavaFX code from this repository (again depends on the number of potentiometers used).
+9. Build and run the project.
