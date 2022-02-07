@@ -20,6 +20,8 @@ Display real time data from multiple potentiometers simultaneously in a Graphica
 
 ### Hardware Setup:
 
+![Screenshot 2022-02-07 at 3 50 58 PM](https://user-images.githubusercontent.com/82862036/152769650-9244491a-829b-4c8f-b762-83f77508e743.png)
+
 ![WhatsApp Image 2022-02-07 at 11 36 20 AM](https://user-images.githubusercontent.com/82862036/152735262-eaa6aa0f-6919-4306-be1b-79684143f72f.jpeg)
 
 1. Connect a jumper wire from the 5V pin of the Arduino to the breadboard. This will act as the main 5V supply to all the potentiometers.
