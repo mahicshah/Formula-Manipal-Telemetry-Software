@@ -12,4 +12,8 @@ Display real time data from multiple potentiometers simultaneously in a Graphica
 - Potentiometers (multiple)
 - Light Dependent Resistor (optional)
 
-### Setup:
+### Software:
+
+- Arduino IDE
+- IntelliJ Idea
+
