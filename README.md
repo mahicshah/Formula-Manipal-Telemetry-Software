@@ -1,3 +1,15 @@
 # JavaFX_GUI
 
-This repository contains both the Arduino and JavaFX codes to print real time potentiometer data in the GUI.
+## Project:
+
+Display real time data from multiple potentiometers simultaneously in a Graphical User Interface (GUI).
+
+### Components required:
+
+- Arduino Uno (SMD preferrable)
+- USB A to USB B Cable
+- Jumper Wires
+- Potentiometers (multiple)
+- Light Dependent Resistor (optional)
+
+### Setup:
