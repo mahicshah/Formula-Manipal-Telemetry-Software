@@ -2,7 +2,9 @@
 
 ## Project:
 
-Display real time data from multiple potentiometers simultaneously in a Graphical User Interface (GUI).![Screenshot 2022-02-17 at 11 48 59 PM](https://user-images.githubusercontent.com/82862036/154545538-94d185ab-97df-437c-977a-5a86cdbc5c91.png)
+Display real time data from multiple potentiometers simultaneously in a Graphical User Interface (GUI).
+
+![Screenshot 2022-02-17 at 11 48 59 PM](https://user-images.githubusercontent.com/82862036/154545538-94d185ab-97df-437c-977a-5a86cdbc5c91.png)
 
 ### Components required:
 
