@@ -4,7 +4,7 @@
 
 Display real time data from multiple potentiometers simultaneously in a Graphical User Interface (GUI).
 
-![Screenshot 2022-02-17 at 11 48 59 PM](https://user-images.githubusercontent.com/82862036/154545538-94d185ab-97df-437c-977a-5a86cdbc5c91.png)
+![Screenshot 2022-03-21 at 7 21 01 PM](https://user-images.githubusercontent.com/82862036/159275240-e0206dc5-8d53-409e-91f3-c986f02982fd.png)
 
 ### Components required:
 
