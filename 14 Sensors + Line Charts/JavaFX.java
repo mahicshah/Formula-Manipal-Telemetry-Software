@@ -56,7 +56,7 @@ public class Controller extends Application {
     Menu Tools = new Menu("Tools");
     Menu Ports = new Menu("Ports");
 
-    SerialPort arduinoPort = null;
+    SerialPort XBeePort = null;
     ObservableList<String> portList;
 
     private void detectPort() {
@@ -75,12 +75,11 @@ public class Controller extends Application {
         comboBoxPorts.valueProperty().addListener(
                 (ChangeListener<String>) (observable, oldValue, newValue) -> {
                     System.out.println(newValue);
-                    disconnectArduino();
-                    connectArduino(newValue);
+                    disconnectXBee();
+                    connectXBee(newValue);
                 }
         );
 
-        //LineChart
         final NumberAxis xAxis1 = new NumberAxis();
         final NumberAxis yAxis1 = new NumberAxis();
         final NumberAxis xAxis2 = new NumberAxis();
@@ -342,8 +341,7 @@ public class Controller extends Application {
         primaryStage.show();
     }
 
-    public void shiftSeriesData1(float newValue)
-    {
+    public void shiftSeriesData1(float newValue) {
         for(int i=0; i<NUM_OF_POINT-1; i++){
             XYChart.Data<String, Number> ShiftDataUp = (XYChart.Data<String, Number>) series1.getData().get(i + 1);
             Number shiftValue = ShiftDataUp.getYValue();
@@ -354,8 +352,7 @@ public class Controller extends Application {
         lastData.setYValue(newValue);
     }
 
-    public void shiftSeriesData2(float newValue2)
-    {
+    public void shiftSeriesData2(float newValue2) {
         for(int i=0; i<NUM_OF_POINT-1; i++){
             XYChart.Data<String, Number> ShiftDataUp = (XYChart.Data<String, Number>)series2.getData().get(i+1);
             Number shiftValue = ShiftDataUp.getYValue();
@@ -366,8 +363,8 @@ public class Controller extends Application {
         lastData.setYValue(newValue2);
     }
 
-    public void connectArduino(String port){
-        System.out.println("Arduino is connected.");
+    public void connectXBee(String port){
+        System.out.println("XBee is connected.");
         SerialPort serialPort = new SerialPort(port);
         try {
             serialPort.openPort();
@@ -376,7 +373,6 @@ public class Controller extends Application {
             serialPort.addEventListener((SerialPortEvent serialPortEvent) -> {
                 if (serialPortEvent.isRXCHAR()) {
                     try {
-
                             byte[] l;
 
                             while (serialPort.isOpened()) {
@@ -474,27 +470,25 @@ public class Controller extends Application {
                             MenuItem Sub_Ports = new MenuItem(serialPort.getPortName());
                             Ports.getItems().add(Sub_Ports);
 
-
-                        } catch(SerialPortException ex){
+                        } catch(SerialPortException ex) {
                             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
                         }
                 }
             });
-
-            arduinoPort = serialPort;
+            XBeePort = serialPort;
         } catch (SerialPortException ex) {
             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("SerialPortException: " + ex);
         }
     }
 
-    public void disconnectArduino() {
-        System.out.println("Arduino has been disconnected.");
-        if (arduinoPort != null) {
+    public void disconnectXBee() {
+        System.out.println("XBee has been disconnected.");
+        if (XBeePort != null) {
             try {
-                arduinoPort.removeEventListener();
-                if (arduinoPort.isOpened()) {
-                    arduinoPort.closePort();
+                XBeePort.removeEventListener();
+                if (XBeePort.isOpened()) {
+                    XBeePort.closePort();
                 }
             } catch (SerialPortException ex) {
                 Logger.getLogger(Controller.class.getName())
@@ -505,7 +499,7 @@ public class Controller extends Application {
 
     @Override
     public void stop() throws Exception {
-        disconnectArduino();
+        disconnectXBee();
         super.stop();
     }
 
