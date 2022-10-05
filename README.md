@@ -4,7 +4,7 @@
 
 Display real time data from multiple potentiometers simultaneously in a Graphical User Interface (GUI).
 
-![Screenshot 2022-03-21 at 7 21 01 PM](https://user-images.githubusercontent.com/82862036/159275240-e0206dc5-8d53-409e-91f3-c986f02982fd.png)
+![Telemetry Software SS](https://user-images.githubusercontent.com/82862036/194118333-a7831c8f-1c2b-4b8a-b697-e1171eff05e7.png)
 
 ### Components required:
 
